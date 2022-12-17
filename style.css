@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(to top right,rgb(244, 116, 227), rgb(66, 212, 232));
+}
+.animation{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+#front_wheel, #back_wheel{
+    animation: wheel 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#others{
+    animation: bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes bike{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(8deg);
+    }
+}
+#hair{
+    animation: hair 0.5s ease-out infinite alternate;
+    transform-origin: top;
+}
+@keyframes hair{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(2deg);
+    }
+}
+#cloud{
+    animation: cloud 3s infinite linear;
+    transform-origin: top;
+}
+@keyframes cloud{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#leaf{
+    animation: leaf 2s infinite linear;
+    transform-origin: bottom;
+}
+@keyframes leaf{
+    from{
+        transform: translateX(0%) rotateX(0deg) ;
+    }
+    to{
+        transform: translateX(-100%) rotateX(50deg);
+    }
+}
+
+#back_leg{
+    animation: legs .7s ease infinite alternate;
+    transform-origin: top;
+}
+#front_leg{
+    animation: legs .6s ease infinite alternate;
+    transform-origin: right;
+}
+@keyframes legs{
+    from{
+        transform:rotateX(0deg);
+    }
+    to{
+        transform: rotateX(15deg);
+    }
+}
+
